@@ -1,45 +1,27 @@
-// Select the navbar list
-const navbarList = document.getElementById('navbar__list');
+document.addEventListener("DOMContentLoaded", function() {
+    const navbarList = document.getElementById("navbar__list");
 
-// Get all sections
-const sections = document.querySelectorAll('section');
+    // تأكد من أن القائمة فارغة قبل البناء
+    navbarList.innerHTML = '';
 
-// Loop through each section to create navigation links
-sections.forEach(section => {
-    const sectionId = section.id;
-    const sectionDataNav = section.getAttribute('data-nav');
-    
-    // Create a new list item
-    const li = document.createElement('li');
-    const link = document.createElement('a');
+    // الحصول على جميع الأقسام
+    const sections = document.querySelectorAll("section");
 
-    // Set link attributes
-    link.href = `#${sectionId}`;
-    link.className = 'menu__link';
-    link.textContent = sectionDataNav;
+    // بناء قائمة التنقل الديناميكية
+    sections.forEach(section => {
+        const sectionId = section.getAttribute("id");
+        const sectionName = section.getAttribute("data-nav");
 
-    // Append link to list item, and then to the navbar
-    li.appendChild(link);
-    navbarList.appendChild(li);
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+
+        link.href = `#${sectionId}`;
+        link.textContent = sectionName;
+
+        listItem.appendChild(link);
+        navbarList.appendChild(listItem);
+    });
 });
 
-// Smooth scrolling
-navbarList.addEventListener('click', function(event) {
-    if (event.target.tagName === 'A') {
-        event.preventDefault();
-        const targetId = event.target.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
 
-        // Scroll to the target section with offset for fixed header
-        const headerOffset = document.querySelector('.page__header').offsetHeight;
-        const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        // Smooth scroll to the target section
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    }
- 
-});

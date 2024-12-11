@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="page__header">
+        <nav class="navbar__menu">
+            <h1>Coffee Shop</h1>
+            <ul id="navbar__list"> </ul>
+            <div class="navbar__icons">
+                <a href="#" class="icon"><i class="fas fa-search"></i></a>
+                <a href="add-to-cart.html" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section1" data-nav="Home">
+            <div class="landing__container">
+                <div class="image-container">
+                    <img src="imgs/top-view-breakfast-elements.jpg" alt="Delicious Coffee" class="home-image">
+                    <h2 class="centered-text">Welcome to Our Coffee Shop</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" data-nav="Products">
+            <div class="landing__container">
+                <h2>Our Products</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <h3>Espresso</h3>
+                        <img src="imgs/8012164.jpg" alt="Delicious Coffee" class="one-image">
+                        <p>Rich and bold coffee shot.</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <h3>Latte</h3>
+                        <img src="imgs/8023806.jpg" alt="Delicious Coffee" class="one-image">
+                        <p>Creamy coffee with milk.</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <h3>Cappuccino</h3>
+                        <img src="imgs/8023828.jpg" alt="Delicious Coffee" class="one-image">
+                        <p>Espresso with frothy milk.</p>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" data-nav="Contact">
+            <div class="landing__container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+        <section id="section4" data-nav="Gratitude">
+            <div class="Gratitude__container">
+                <h2>Thank You for Visiting!</h2>
+                <p>We appreciate your interest in our coffee shop. We hope to see you again soon!</p>
+            </div>
+          
+        </section>
+        
+    </main>
+    
+  
+    <footer class="page__footer">
+        <p>&copy; 2024 Coffee Shop</p>
+    </footer>
+
+   
+  
+
+
+</body>
+
+</html>

@@ -1,48 +1,69 @@
-/* General Styles */
-body {
-    color:  rgb(229, 189, 157);
-    background-color: rgb(229, 189, 157);
 
+body {
+
+    color: rgb(229, 189, 157);
+
+    background-color: rgb(229, 189, 157);
+    
+    
+    
     margin: 0;
- 
-  
-}
-.landing__container {
+    }
+    .landing__container {
     position: relative;
     text-align: center;
     color: rgb(112, 63, 6);
-}
-
-
-
-.home-image {
-   width: 100%;
-   height: auto;
-    transition: transform 0.5s ease; /* إضافة حركة عند تغيير الحجم */
-}
-
-.centered-text {
-   position: absolute;
+    }
+    .menu-icon {
+      margin: 10px;
+        cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar__menu ul {
+           
+            flex-direction: column;
+            position: absolute;
+            background-color: white; /* خلفية القائمة المنسدلة */
+            width: 100%;
+            top: 60px; /* ضبط هذا بناءً على ارتفاع شريط التنقل */
+        }
+    
+        .navbar__menu.active ul {
+            display: flex; /* تظهر القائمة عند تفعيلها */
+        }
+    
+        .menu-icon {
+            display: block; /* تظهر أيقونة القائمة على الشاشات الصغيرة */
+        }
+    }
+    .home-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    }
+    
+    .centered-text {
+    position: absolute;
     top: 40%;
     left:70%;
     transform: translate(-50%, -50%);
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    animation: fadeIn 1s ease; /* إضافة تأثير الفيد إن */
-}
-
-@keyframes fadeIn {
+    animation: fadeIn 1s ease;
+    }
+    
+    @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-/* تأثير عند تمرير الماوس */
-.image-container:hover .home-image {
-    transform: scale(1.05); /* تكبير الصورة عند تمرير الماوس */
-}
-.page__header {
+    }
+    
+    .image-container:hover .home-image {
+    transform: scale(1.05);
+    }
+    .page__header {
     background: rgb(112, 63, 6);
-  position: fixed;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
@@ -51,48 +72,48 @@ body {
     justify-content: space-between;
     align-items: center;
     
-}
-
-.navbar__menu {
+    }
+    
+    .navbar__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* تأكد من أن القائمة تأخذ عرض كامل */
-}
-
-.navbar__menu ul {
+    width: 100%;
+    }
+    
+    .navbar__menu ul {
     display: flex;
     padding-left:0;
     margin: 0;
-}
-
-.navbar__menu li {
+    }
+    
+    .navbar__menu li {
     margin: 0 15px;
-}
-
-.navbar__icons {
+    }
+    
+    .navbar__icons {
     display: flex;
-    margin-right: auto; /* هذا يجعل الأيقونات تتحرك إلى اليمين */
-}
-
-.icon {
+    margin-right: auto;
+    }
+    
+    .icon {
     color: rgb(229, 189, 157);
     margin-right: 50px;
     font-size: 1.5em;
-}
-
-.landing__container {
-    padding: 5em 1em; /* Adding padding for the fixed header */
+    }
+    
+    .landing__container {
+    padding: 5em 1em;
     text-align: center;
-}
-
-.product-list {
+    }
+    
+    .product-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.product {
+    }
+    
+    .product {
     background:#fff ;
     color: #000;
     padding: 1em;
@@ -101,9 +122,9 @@ body {
     width: 200px;
     text-align: center;
     box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
-}
-
-.product button {
+    }
+    
+    .product button {
     background: rgb(112, 63, 6);
     color: #ffffffee;
     border: none;
@@ -111,31 +132,31 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s;
-}
-
-.product button:hover {
+    }
+    
+    .product button:hover {
     background: rgb(112, 63, 6);
-}
-
-form {
+    }
+    
+    form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
-}
-
-label {
+    }
+    
+    label {
     margin: 0.5em 0 0.2em;
-}
-
-input, textarea {
+    }
+    
+    input, textarea {
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #1b1b1b;
     border-radius: 4px;
-}
-
-button {
+    }
+    
+    button {
     background: rgb(112, 63, 6);;
     color: #1b1b1b;
     border: none;
@@ -143,24 +164,24 @@ button {
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s;
-}
-
-button:hover {
+    }
+    
+    button:hover {
     background: rgb(249, 248, 248);
-}
-
-.page__footer {
+    }
+    
+    .page__footer {
     background: rgb(112, 63, 6);
     padding: 3em;
     color:#fff;
     text-align: center;
     
+    
     padding: 10px 0;
     width: 100%;
     height: auto;
-  
-}
-.product {
+    }
+    .product {
     background: #fff;
     color: rgb(112, 63, 6);
     padding: 1em;
@@ -169,78 +190,188 @@ button:hover {
     width: 200px;
     text-align: center;
     box-shadow: 0 2px 5px rgb(112, 63, 6);
-    position: relative; /* يسمح لنا بوضع العناصر بشكل مطلق داخلها */
-}
-
-.one-image {
-    width: 100%; /* يجعل الصورة تأخذ عرض 100% من العنصر الأب */
-    height: 150px; /* يمكنك ضبط الارتفاع حسب الحاجة */
-    object-fit: cover; /* يجعل الصورة تغطي المساحة بدون تشويه */
-    border-radius: 8px 8px 0 0; /* زوايا دائرية في الجزء العلوي */
-}
-
-
-header h1 {
-    color: white; /* تغيير لون الخط في الهيدر */
-}
-
-header nav a {
-    color: white; /* تغيير لون الروابط في الهيدر */
-    text-decoration: none; /* إزالة الخط السفلي */
-    padding: 10px; /* إضافة حشوة للروابط */
-}
-
-header nav a:hover {
-    color: rgb(31, 17, 1); /* لون الروابط عند التمرير */
-}
-header {
-   
-        display: flex;
-        justify-content: space-between; /* توزيع العناصر بالتساوي */
-        align-items: center; /* محاذاة العناصر عموديًا */
-        padding: 10px 20px; /* إضافة حشوة */
-  
-    position: relative; /* تأكد من أن الهيدر يمكنه استخدام z-index */
-    z-index: 10; /* تأكد من أن الهيدر فوق العناصر الأخرى */
+    position: relative;
+    }
     
-}
-img{
+    .one-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    }
+    
+    header h1 {
+    color: white;
+    }
+    
+    header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    }
+    
+    header nav a:hover {
+    color: rgb(31, 17, 1);
+    }
+    header {
+    
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 10px 20px; 
+    
+    position: relative; 
+    z-index: 10; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    img{
     width: 100%;
     height: auto;
-}
-
-.image-container {
+    }
+    
+    .image-container {
     position: relative;
-    z-index: 1; /* تأكد من أن الحاوية تحت الهيدر */
+    z-index: 1;
     width: 100%;
     height: auto;
     max-width: 1200px;
     margin: auto;
-}
-header nav a {
-    font-size: 1.2rem; /* حجم الخط الأساسي */
-}
-
-@media (max-width: 768px) {
+    }
+    header nav a {
+    font-size: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
     h1{
-        font-size: 1.5rem;
+    font-size: 1.5rem;
     }
     header nav a {
-        font-size: 1rem; /* حجم أصغر للشاشات الصغيرة */
-    }
-}
-
-@media (max-width: 480px) {
-    header nav a {
-        font-size: 0.9rem; /* حجم أصغر جدًا للهواتف */
-    }
-}
-header nav a {
-    font-size: 1.5rem; /* حجم الخط، يمكنك تغييره حسب الحاجة */
-}
-h1{
-    font-size: 2rem;
-}
-p{
     font-size: 1rem;
-}
+    }
+    }
+    
+    @media (max-width: 480px) {
+    header nav a {
+    font-size: 0.9rem;
+    }
+    }
+    header nav a {
+    font-size: 1.5rem;
+    }
+    h1{
+    font-size: 2rem;
+    }
+    p{
+    font-size: 1rem;
+    }
+    
+    .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    #dynamic-list {
+        margin-top: 20px;
+    }
+    #dynamic-list li {
+        cursor: pointer; 
+        color: blue; 
+        text-decoration: underline; 
+    }
+    
+    
+    .navbar {
+        display: none; 
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+    }
+    .navbar.active {
+        display: block; 
+    }
+    
+    body {
+        color: rgb(229, 189, 157);
+        background-color: rgb(229, 189, 157);
+        margin: 0;
+    }
+    
+    .landing__container {
+        position: relative;
+        text-align: center;
+        color: rgb(112, 63, 6);
+    }
+    
+    .page__header {
+        background: rgb(112, 63, 6);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navbar__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .navbar__menu ul {
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    .navbar__menu li.active a {
+        font-weight: bold;
+        color: rgb(151, 138, 107); /* أو أي لون تريده */
+    }
+    
+    header h1 {
+        color: white;
+    }
+    .Gratitude__container {
+        padding: 5em 1em;
+        text-align: center;
+        background-color: rgb(229, 189, 157); /* لون خلفية مميز */
+        color: rgb(112, 63, 6); /* لون النص */
+        border-top: 2px solid rgb(112, 63, 6); /* حدود علوية */
+    }
+    
+    .Gratitude__container h2 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    .Gratitude__container p {
+        font-size: 1.2em;
+        max-width: 600px; /* عرض محدد للنص */
+        margin: 0 auto; /* توسيط النص */
+    }
+    #backToTop {
+        position: fixed; /* مثبت في مكان ثابت */
+        bottom: 20px; /* المسافة من الأسفل */
+        right: 20px; /* المسافة من اليمين */
+        display: none; /* مخفي بشكل افتراضي */
+        padding: 10px 15px; /* حشوة الزر */
+        background-color: #007bff; /* لون خلفية الزر */
+        color: white; /* لون النص */
+        border: none; /* لا توجد حدود */
+        border-radius: 5px; /* زوايا دائرية */
+        cursor: pointer; /* شكل المؤشر عند المرور على الزر */
+        transition: background-color 0.3s; /* انتقال سلس عند تغيير اللون */
+    }
+    
+    #backToTop:hover {
+        background-color: #0056b3; /* لون مختلف عند التمرير فوق الزر */
+    }
